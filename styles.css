@@ -1,0 +1,323 @@
+:root {
+  --blue: #3374ff;
+  --sand: #ffbe33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 1rem/1.5, Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* global css */
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* header */
+
+header {
+  background-color: var(--blue);
+  color: #ffffff;
+  padding: 0.5rem;
+  min-height: 4.3rem;
+  border: 2px solid var(--sand);
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+header li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+header ul {
+  margin: auto 3.5rem;
+  display: flex;
+}
+
+header h1 {
+  margin-left: 3.5rem;
+  margin-right: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight,
+.current a {
+  color: var(--sand);
+  font-weight: bolder;
+}
+
+li a:hover {
+  color: #f4f4f4;
+}
+
+/* showcase styling */
+
+#showcase {
+  position: relative;
+  min-height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#showcase::before {
+  content: "";
+
+  background: url("https://cdn.thewirecutter.com/wp-content/uploads/2020/04/laptops-lowres-2x1-.jpg?auto=webp&quality=75&crop=2:1&width=1024")
+    round 100% 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+#showcase h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  position: relative;
+  color: #010101;
+  line-height: 1.5;
+  opacity: 1;
+  max-width: 960px;
+}
+
+#showcase p {
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.5rem;
+  position: relative;
+  color: #010101;
+  line-height: 1.1;
+  max-width: 960px;
+}
+
+/* newsletter styling */
+
+#newsletter > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  color:#ffffff;
+  min-height: 6rem;
+}
+
+#newsletter form {
+
+    margin-top:1rem;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+#newsletter input[type="email"]{
+    width: 20rem;
+    min-height: 40px ;
+}
+
+#newsletter button{
+    min-height: 45px;
+    color:#f4f4f4;
+    background-color: var(--sand);
+    font-weight: 900;
+    border:none
+}
+
+#newsletter button:hover{
+    cursor: pointer;
+    color: #f4f4f4;
+    transform: scale(1.2)
+}
+
+#newsletter h2 {
+    font-size: 2.5rem;
+  margin-left: 2rem;
+  margin-right: auto;
+}
+
+/* boxes styling */
+
+img{
+    width: 25%;
+    height: 25%;
+}
+.boxes > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 1rem;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.boxes h1{
+    font-size: 1.5rem;
+}
+
+/* footer design */
+
+footer{
+    background-color: var(--blue);
+}
+
+footer p{
+    min-height: 5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: auto 0;
+    text-align: center;
+    color:#ffffff;
+}
+
+/* about us page 
+*
+*
+*
+*/
+
+.about{
+    display: flex;
+    gap:2rem;
+    padding: 2rem;
+}
+
+
+.dark{
+    background-color: #010101;
+    color: #f4f4f4;
+    padding:2rem;
+}
+
+
+/* services page 
+*
+*
+*
+*/
+
+.services{
+    display: flex;
+}
+
+.form > *{
+    display: block;
+    margin:1rem;
+}
+
+.form{
+    margin: 1rem;
+}
+
+.form h3{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.form p{
+    font-size: larger;
+    font-weight: 100;
+}
+
+.form input{
+    width: 15rem;
+
+}
+
+.website{
+    margin: 0 1rem;
+    max-width: fit-content;
+}
+
+.website ul{
+    list-style: none;
+    background: #a79898;
+    padding: 4rem;
+}
+
+.website h3{
+    font-size: 2.5rem;
+}
+
+.website p{
+    font-size: 1.5rem;
+}
+
+/*
+    Responsive design
+*/
+
+@media(max-width: 40rem) {
+    .navbar{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        margin-left: 2rem;
+    }
+
+    #newsletter > *{
+        display: block;
+        /* flex-direction: column; */
+        margin-bottom: 0 auto;
+        padding: 1rem;
+    }
+
+    form{
+        margin: 0 auto;
+        padding: 1rem;
+        width: 80%;
+    }
+
+
+    #newsletter input[type="email"]{
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    #newsletter button{
+        width: 80%;
+    }
+
+    .boxes > *{
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .about{
+        display: block;
+    }
+
+
+    .services{
+        display: block;
+    }
+
+    .form{
+        width: 90%;
+    }
+
+    
+} 
